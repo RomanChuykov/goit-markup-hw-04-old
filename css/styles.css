@@ -20,6 +20,7 @@ body{
     font-size: 14px;
     letter-spacing: 0.03em;
     background-color: var(--bg-color);
+    max-width: 1600px;
 }
 .visually-hidden {
     position: absolute;
@@ -113,12 +114,16 @@ body{
 .menu:hover,
 .menu:focus{
     color:var(--nav-hover);
+    fill: var(--nav-hover);
 }
 .contacts{
     list-style: none;
     display: flex;
     margin-left: auto;
     align-items: center; 
+}
+.contacts-pic{
+    margin-right: 10px;
 }
 .contacts-link{
     text-decoration: none;
@@ -135,11 +140,16 @@ body{
 
 /*----------------------  Секция герой   -------   */
 .hero{
-    
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+    ), url(../images/hero-bg.jpg);
 }
 .container-hero{
    /* ???????????????*/
-   background: var(--hero-bgcolor);
+   /*background: var(--hero-bgcolor);*/
+   
+   
    text-align: center;
    padding-top: 200px;
    padding-bottom: 200px;
@@ -183,6 +193,15 @@ body{
     display: flex;
    justify-content: center;
 }
+.articles-container-pic{
+    max-width: 270px;
+    min-height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+}
 .articles{
     display: flex;
 }
@@ -209,7 +228,7 @@ body{
     color: var(--article-color);
 }
 
-/*===============================   Чем мы ханимаемся    =============*/
+/*===============================   Чем мы занимаемся    =============*/
 .activity{
     padding-bottom: 94px;
 }
@@ -235,7 +254,8 @@ body{
    background: #F5F4FA;
 }
 .activity-title,
-.command-title{
+.command-title,
+.clients-title{
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -246,6 +266,15 @@ body{
  .command-list{
      display: flex;
    
+ }
+ .command-li{
+    box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    
+    
  }
  .command-list li:not(:last-child){
     margin-right: 30px;
@@ -274,9 +303,56 @@ body{
     letter-spacing: 0.03em;
     text-align: center;
     color: var(--command-position-font-color);
-    padding-bottom: 30px;
+    margin-bottom: 16px;
+}
+.socials{
+    display: flex;
+    /*justify-content: center;*/
+    margin-left:32px;
+    margin-right: 32px;
+    margin-bottom: 30px;
+    box-shadow: initial;
+}
+.socials-li{
+    display: flex;
+    margin-right:0px;
+    box-shadow: none;
+}
+.socials li:not(:last-child){
+    margin-right: 10px;
+}
+.socials-button{
+    fill: #AFB1B8; 
+    border-radius: 50%;
+    max-width: 44px;
+    max-height: 44px;
+    padding: 12px;
+    box-shadow: none;
+}
+.socials-button:hover,
+.socials-button:focus,
+.footer-socials-button:hover,
+.footer-socials-button:focus{
+    fill: #FFFFFF;
+    background-color: #2196F3;
 }
 
+/*===============    Постоянные клиенты    =================================*/
+.clients{
+    padding-bottom: 94px;
+}
+.clients-list{
+    display: flex;
+    
+}
+.clients-list li{/*:not(:last-child){*/
+    margin-left: 30px;
+    
+
+}
+.client-pic{
+    margin: 16px 32px;
+}
 /* --------------------------  footer  ----------------------------*/
 .footer{
     background: var(--footer-bgcolor);
@@ -286,6 +362,7 @@ body{
 .container-footer{
     padding-left: auto;
     padding-left: auto;
+    display:flex
     
 }
 .footer-logo{
@@ -327,6 +404,43 @@ body{
     line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
 }
+.socials-part{
+margin-left: 70px;
+
+}
+.footer-join{
+ font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+margin-bottom: 20px;
+}
+/*===============================*/
+.footer-socials{
+    display: flex;
+   
+   
+}
+.footer-socials-li{
+    display: flex;
+    margin-right:0px;
+}
+.footer-socials li:not(:last-child){
+    margin-right: 10px;}
+.footer-socials-button{
+    fill: #FFFFFF; 
+    border-radius: 50%;
+    max-width: 44px;
+    max-height: 44px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
 
 /* ===========================  portfolio  ==========================*/
 
@@ -355,6 +469,10 @@ body{
 .filter-button:focus{
     background-color: var(--nav-hover);
     color:var(--button-fontcolor);
+    box-shadow: 
+        0px 3px 1px rgba(0, 0, 0, 0.1), 
+        0px 1px 2px rgba(0, 0, 0, 0.08), 
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /*======================   примеры работ  ============= */
@@ -365,17 +483,36 @@ body{
     display: flex;
     /*padding-left: 215px;*/
     flex-wrap: wrap;
+    /*border: 1px solid red;*/
+  
 
 }
 .example:not(:nth-child(3n+1)){
     margin-left: 30px;
 }
-
-
+.example-link{
+    display: block;
+    box-sizing: border-box;
+   /* border: 1px solid #EEEEEE;*/
+ }
+ 
+.example-link :hover,
+.example-link :focus {
+    box-shadow: 
+      0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 4px 4px rgba(0, 0, 0, 0.06), 
+      1px 4px 6px rgba(0, 0, 0, 0.16);   
+} 
 
 .example{
     /*margin-left: 30px;*/
     margin-bottom: 30px;
+
+    
+background: #FFFFFF;
+/*border: 1px solid #EEEEEE;*/
+box-sizing: border-box;
+
 
 }
 .example a{
