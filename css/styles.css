@@ -20,7 +20,6 @@ body{
     font-size: 14px;
     letter-spacing: 0.03em;
     background-color: var(--bg-color);
-    max-width: 1600px;
 }
 .visually-hidden {
     position: absolute;
@@ -49,6 +48,7 @@ body{
      /* height: 80px;
       /*padding-top: 24px;
       padding-bottom: 25px;*/
+      border-bottom: 1px solid #ECECEC;
   }
   .container{
     width:1200px;
@@ -62,7 +62,7 @@ body{
  }
   .container-nav{
     display: flex;
-    border-bottom: 1px solid #ECECEC;
+   
   }
 
 /*---------------------  Секция навигации-------------        */
@@ -112,19 +112,29 @@ body{
 .contacts-link:hover,
 .contacts-link:focus,
 .menu:hover,
-.menu:focus{
+.menu:focus,
+.contacts-pic:hover, 
+.contacts-pic:focus{
     color:var(--nav-hover);
     fill: var(--nav-hover);
 }
+/*.contacts-pic:hover, 
+.contacts-pic:focus{
+ fill:var(--nav-hover);
+}*/
 .contacts{
     list-style: none;
     display: flex;
     margin-left: auto;
     align-items: center; 
+    
 }
 .contacts-pic{
     margin-right: 10px;
+    fill: var(--contacts-link-color);
+    align-items: center;
 }
+
 .contacts-link{
     text-decoration: none;
     font-size: 14px;
@@ -135,44 +145,57 @@ body{
     text-align: left;
     color: var(--contacts-link-color);
     margin-right: 50px;
+    display: flex;
 }
 
 
 /*----------------------  Секция герой   -------   */
 .hero{
-    background-image: linear-gradient(
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 210px;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 452px;
+    padding-right: 452px;
+    
+    background-image: linear-gradient(   
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
     ), url(../images/hero-bg.jpg);
+    
 }
 .container-hero{
    /* ???????????????*/
    /*background: var(--hero-bgcolor);*/
-   
-   
-   text-align: center;
-   padding-top: 200px;
-   padding-bottom: 200px;
+max-width: 696px;  
    padding-left: auto;
    padding-right: auto;
 }
 .hero-title{
+    font-family: Roboto;
+    font-style: normal;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
+
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--hero-font-color);
-    padding-left: 237px;
-    padding-right: 237px;
+     width: 696px; 
+    /*margin-left: 237px; 
+    margin-right: 237px;    */   
 }    
     .hero-button{
     cursor: pointer;
     border: none;
     width: 200px;
     height: 50px;
-    left: 700px;
+    /* left: 700px; */
     top: 430px;
     background: var(--nav-hover);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -186,6 +209,7 @@ body{
     text-align: center;
     color: var(--hero-font-color);
     margin-top: 30px;
+ 
     }
 
 /*-------------------------  Секция статей   -------------------*/
@@ -201,6 +225,7 @@ body{
     display:flex;
     justify-content: center; 
     align-items: center;
+    margin-bottom: 30px;
 }
 .articles{
     display: flex;
@@ -268,6 +293,8 @@ body{
    
  }
  .command-li{
+     
+background: #FFFFFF;
     box-shadow: 
     0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -340,6 +367,8 @@ body{
 /*===============    Постоянные клиенты    =================================*/
 .clients{
     padding-bottom: 94px;
+    padding-top: 94px;
+ 
 }
 .clients-list{
     display: flex;
@@ -352,7 +381,20 @@ body{
 }
 .client-pic{
     margin: 16px 32px;
+    fill: #AFB1B8;
 }
+.client-pic:hover,
+.client-pic:focus{
+    fill:  #2196F3;   
+    border: 1px solid #2196F3;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+/* .client-link:hover, */
+/* .client-link:focus{ */
+ /* fill:  #2196F3; */
+/* } */
+
 /* --------------------------  footer  ----------------------------*/
 .footer{
     background: var(--footer-bgcolor);
@@ -362,7 +404,8 @@ body{
 .container-footer{
     padding-left: auto;
     padding-left: auto;
-    display:flex
+    display:flex;
+    align-items: baseline;
     
 }
 .footer-logo{
@@ -464,6 +507,8 @@ margin-bottom: 20px;
     color: inherit;
     padding: 6px 22px;
     margin-left: 8px;
+    background: #F5F4FA;
+    border-radius: 4px;
 }
 .filter-button:hover,
 .filter-button:focus{
@@ -473,6 +518,7 @@ margin-bottom: 20px;
         0px 3px 1px rgba(0, 0, 0, 0.1), 
         0px 1px 2px rgba(0, 0, 0, 0.08), 
         0px 2px 2px rgba(0, 0, 0, 0.12);
+
 }
 
 /*======================   примеры работ  ============= */
@@ -518,15 +564,21 @@ box-sizing: border-box;
 .example a{
     text-decoration: none;
 }
+.work-capture{
+    margin-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 20px;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
 .works-title{
     font-weight: bold;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color:var(--font-color);
-    margin-top: 20px;
     margin-bottom: 4px;
-    padding-left: 24px;
 }
 .works-type{
     font-size: 14px;
@@ -534,6 +586,4 @@ box-sizing: border-box;
     font-size: 16px;
     line-height: 1.87;
     color: var(--works-type-color);
-    padding-bottom: 20px;
-    padding-left: 24px;
 }
