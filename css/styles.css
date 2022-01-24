@@ -146,6 +146,7 @@ body{
     color: var(--contacts-link-color);
     margin-right: 50px;
     display: flex;
+    align-items: center;
 }
 
 
@@ -153,14 +154,14 @@ body{
 .hero{
     text-align: center;
     padding-top: 200px;
-    padding-bottom: 210px;
+    padding-bottom: 200px;
     max-width: 1600px;
     height: 600px;
     margin: 0 auto;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-left: 452px;
-    padding-right: 452px;
+    /* padding-left: 452px; */
+    /* padding-right: 452px; */
     
     background-image: linear-gradient(   
         rgba(47, 48, 58, 0.4),
@@ -382,6 +383,9 @@ background: #FFFFFF;
 .client-pic{
     margin: 16px 32px;
     fill: #AFB1B8;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 .client-pic:hover,
 .client-pic:focus{
@@ -526,12 +530,8 @@ margin-bottom: 20px;
     display:block;
 }
 .example-list{
-    display: flex;
-    /*padding-left: 215px;*/
+    display: flex ;
     flex-wrap: wrap;
-    /*border: 1px solid red;*/
-  
-
 }
 .example:not(:nth-child(3n+1)){
     margin-left: 30px;
@@ -539,7 +539,7 @@ margin-bottom: 20px;
 .example-link{
     display: block;
     box-sizing: border-box;
-   /* border: 1px solid #EEEEEE;*/
+    text-decoration: none;
  }
  
 .example-link :hover,
@@ -553,19 +553,11 @@ margin-bottom: 20px;
 .example{
     /*margin-left: 30px;*/
     margin-bottom: 30px;
-
-    
-background: #FFFFFF;
-/*border: 1px solid #EEEEEE;*/
-box-sizing: border-box;
-
-
-}
-.example a{
-    text-decoration: none;
+    background: #FFFFFF;
+    box-sizing: border-box;
 }
 .work-capture{
-    margin-top: 20px;
+    padding-top: 20px;
     padding-left: 24px;
     padding-bottom: 20px;
     border-left: 1px solid #EEEEEE;
