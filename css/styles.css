@@ -112,17 +112,15 @@ body{
 .contacts-link:hover,
 .contacts-link:focus,
 .menu:hover,
-.menu:focus,
-.contacts-pic:hover, 
-.contacts-pic:focus{
+.menu:focus{
     color:var(--nav-hover);
-    fill: var(--nav-hover);
-}
-/*.contacts-pic:hover, 
-.contacts-pic:focus{
+ }
+ .contacts-link:hover> .contacts-pic,
+ .contacts-link:focus > .contacts-pic{
+ /* fill:var(--nav-hover); */
  fill:var(--nav-hover);
-}*/
-.contacts{
+}
+ .contacts{
     list-style: none;
     display: flex;
     margin-left: auto;
@@ -314,6 +312,7 @@ background: #FFFFFF;
  }
  .figure-caption{
     padding-top: 30px;
+    padding-bottom: 30px;
  }
 
 .command-name{
@@ -321,7 +320,6 @@ background: #FFFFFF;
     font-weight: 500;
     line-height: 1.18;
     text-align: center;
-
     margin-bottom: 10px;
  }
 .command-position{
@@ -338,7 +336,6 @@ background: #FFFFFF;
     /*justify-content: center;*/
     margin-left:32px;
     margin-right: 32px;
-    margin-bottom: 30px;
     box-shadow: initial;
 }
 .socials-li{
@@ -377,6 +374,8 @@ background: #FFFFFF;
 }
 .clients-list li{/*:not(:last-child){*/
     margin-left: 30px;
+    width: 170px;
+    height: 92px;
     
 
 }
